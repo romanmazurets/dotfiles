@@ -11,6 +11,10 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-commentary' " use gcc to comment line
+Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'slim-template/vim-slim'
 call vundle#end() 
 filetype plugin indent on
 
@@ -33,8 +37,8 @@ set shiftwidth=2
 set nowrap
 set guifont=Hack\ 12
 let g:loaded_matchparen=1
-"set listchars=eol:¬,tab:>␣,trail:~,extends:>,precedes:<,space:·
-"set list
+let mapleader = ","
+" set list
 
 " color settings
 colorscheme wombat256
@@ -44,4 +48,15 @@ hi Normal ctermbg=none
 " javascript addons
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
+
+" syntastic options
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_ruby_exec = 1
 

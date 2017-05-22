@@ -82,12 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
 alias vin="vim +NERDTree"
 setopt RM_STAR_WAIT
 
 setopt menucomplete
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
