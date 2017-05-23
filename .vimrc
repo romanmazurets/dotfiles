@@ -1,3 +1,4 @@
+" FILE ON GIT
 " setting Vundle
 set nocompatible
 filetype off
@@ -38,7 +39,10 @@ set nowrap
 set guifont=Hack\ 12
 let g:loaded_matchparen=1
 let mapleader = ","
-" set list
+nnoremap <F5> :buffers<CR>:buffer<Space>
+set listchars=eol:¬
+set list
+set backupcopy=yes
 
 " color settings
 colorscheme wombat256
@@ -48,6 +52,10 @@ hi Normal ctermbg=none
 " javascript addons
 let g:javascript_plugin_jsdoc = 1
 let g:jsx_ext_required = 0
+
+" hightlight 80-th symbol in line
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
 " syntastic options
 set statusline+=%#warningmsg#
